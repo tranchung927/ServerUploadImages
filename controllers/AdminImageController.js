@@ -31,4 +31,17 @@ module.exports = function (app) {
             }
         })
     })
+    app.post("/admin/remove_image", upload.single("img"), function (req, res) {
+        Image.remove({
+            _id: req.body.image_document_id
+        }, function (err) {
+            if (err) throw err
+            fs.unlink(`./uploads/${req.body.image_name}`, function(err) {
+                if (err) throw err
+                console.log("Successfully deleted image")
+                res.redirect("/assets/images")
+            })
+        })
+    })
+        
 }
