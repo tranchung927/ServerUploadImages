@@ -4,10 +4,11 @@ var fs = require("fs")
 
 module.exports = function (app) {
     app.get("/admin", function (req, res, next) {
-        res.render("index")
+        // res.render("index")
+        res.render("login")
     })
 
-    app.get("/assets/images", function (req, res) {
+    app.get("/admin/images", function (req, res) {
         Image
         .find({})
         .exec(function (err, data) {
@@ -27,7 +28,7 @@ module.exports = function (app) {
             if (err) {
                 throw err
             } else {
-                return res.redirect("/assets/images")
+                return res.redirect("/admin/images")
             }
         })
     })

@@ -1,0 +1,31 @@
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #cccccc;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+button {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    height: 30px;
+    width: 90px;
+    border-radius: 8px;
+    background: green;
+    color: white;
+}
+label {
+    margin-top: 10px;
+}
+#form-login {
+    border-radius: 8px;
+    position: relative;
+	top: 40%;
+    transform: translateY(-50%);
+    background: white;
+    width: 40%;
+}
+body {
+    background: #cccccc
+}

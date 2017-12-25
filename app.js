@@ -13,7 +13,8 @@ var port = process.env.PORT || 3000
 var mongoose = require("mongoose")
 mongoose.connect(config.getDbConnectionString(), { useMongoClient: true })
 mongoose.Promise = global.Promise
-app.use("/assets", express.static(__dirname + "/uploads"))
+app.use("/admin/images", express.static(__dirname + "/uploads"))
+app.use("/assets", express.static(__dirname + "/public"))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
